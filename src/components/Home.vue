@@ -16,16 +16,17 @@ export default {
     return {
       msg: 'crypto-js加密',
       mingwen:"加密一下试试",
-      miwen:""
+      miwen:"",
+      key:"wznxlssm"
     }
   },
   methods:{
     jiami:function(){ //加密
 
-      this.miwen=this.getAES(this.mingwen) 
+      this.miwen=this.getAES(this.mingwen,this.key) 
     },
     jiemi:function(){ //解密
-      alert(this.getDAes(this.miwen))
+      alert(this.getDAes(this.miwen,this.key))
     }
   }
 }
